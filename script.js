@@ -1,3 +1,6 @@
+Você tem um código bem estruturado para um quiz interativo que se baseia em um cenário envolvendo Inteligência Artificial. Para adaptá-lo ao tema automobilismo, vou mostrar como você pode modificar tanto o conteúdo das perguntas quanto as alternativas. Aqui está o código ajustado:
+
+```javascript
 const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
@@ -6,72 +9,71 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
+        enunciado: "Qual é o nome do circuito que sediou a primeira corrida de Fórmula 1 em 1950?",
         alternativas: [
             {
-                texto: "Isso é assustador!",
-                afirmacao: "No início ficou com medo do que essa tecnologia pode fazer. "
+                texto: "Circuito de Mônaco",
+                afirmacao: "Você demonstrou conhecimento sobre os circuitos icônicos da Fórmula 1."
             },
             {
-                texto: "Isso é maravilhoso!",
-                afirmacao: "Quis saber como usar IA no seu dia a dia."
+                texto: "Circuito de Silverstone",
+                afirmacao: "Você sabe que a Fórmula 1 começou em Silverstone, o que é uma ótima base para um fã do automobilismo!"
             }
         ]
     },
     {
-        enunciado: "Com a descoberta desta tecnologia, chamada Inteligência Artificial, uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre esta tecnologia. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de IA em sala de aula. Qual atitude você toma?",
+        enunciado: "Qual piloto é conhecido por ter o maior número de títulos de campeão mundial na Fórmula 1?",
         alternativas: [
             {
-                texto: "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
-                afirmacao: "Conseguiu utilizar a IA para buscar informações úteis."
+                texto: "Ayrton Senna",
+                afirmacao: "Você conhece grandes pilotos, mas ainda não se aprofundou nos recordes atuais."
             },
             {
-                texto: "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
-                afirmacao: "Sentiu mais facilidade em utilizar seus próprios recursos para escrever seu trabalho."
+                texto: "Lewis Hamilton",
+                afirmacao: "Você está atualizado sobre os recordes mais recentes da Fórmula 1!"
             }
         ]
     },
     {
-        enunciado: "Após a elaboração do trabalho escrito, a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
+        enunciado: "Qual é o nome da famosa corrida de resistência que acontece anualmente em Le Mans, na França?",
         alternativas: [
             {
-                texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
-                afirmacao: "Vem impulsionando a inovação na área de IA e luta para abrir novos caminhos profissionais com IA."
+                texto: "24 Horas de Le Mans",
+                afirmacao: "Você conhece as principais corridas de resistência, um grande conhecimento para um entusiasta do automobilismo!"
             },
             {
-                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
-                afirmacao: "Sua preocupação com as pessoas motivou a criar um grupo de estudos entre trabalhadores para discutir meios de utilização de IA de forma ética."
+                texto: "12 Horas de Sebring",
+                afirmacao: "Você está familiarizado com outras corridas importantes, o que é excelente para um fã de automobilismo."
             }
         ]
     },
     {
-        enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
+        enunciado: "Qual é o principal objetivo do sistema de recuperação de energia KERS (Kinetic Energy Recovery System) na Fórmula 1?",
         alternativas: [
             {
-                texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
-                afirmacao: "Notou também que muitas pessoas não sabem ainda utilizar as ferramentas tradicionais e decidiu compartilhar seus conhecimentos de design utilizando ferramentas de pintura digital para iniciantes."
+                texto: "Aumentar a velocidade máxima",
+                afirmacao: "Você está explorando diferentes tecnologias, mas o KERS tem um papel mais específico na recuperação de energia."
             },
             {
-                texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
-                afirmacao: "Acelerou o processo de criação de trabalhos utilizando geradores de imagem e agora consegue ensinar pessoas que sentem dificuldades em desenhar manualmente como utilizar também!"
+                texto: "Recuperar energia durante a frenagem",
+                afirmacao: "Você entende bem as tecnologias que ajudam a melhorar o desempenho dos carros de Fórmula 1!"
             }
         ]
     },
     {
-        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda da IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz? ",
+        enunciado: "Qual é o nome do sistema que ajuda a melhorar a aerodinâmica dos carros de Fórmula 1 ajustando as asas? ",
         alternativas: [
             {
-                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-                afirmacao: "Infelizmente passou a utilizar a IA para fazer todas suas tarefas e agora se sente dependente da IA para tudo."
+                texto: "Sistema de suspensão ativa",
+                afirmacao: "Você está conhecendo os sistemas de ajuste de desempenho, mas a aerodinâmica é ajustada de forma diferente."
             },
             {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
-                afirmacao: "Percebeu que toda IA reproduz orientações baseadas na empresa que programou e muito do que o chat escrevia não refletia o que pensava e por isso sabe que os textos gerados pela IA devem servir como auxílio e não resultado final. "
+                texto: "Sistema de ajuste de asas",
+                afirmacao: "Você tem um bom entendimento sobre as tecnologias que afetam a aerodinâmica dos carros de Fórmula 1!"
             }
         ]
     },
 ];
-
 
 let atual = 0;
 let perguntaAtual;
@@ -105,9 +107,10 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
+    caixaPerguntas.textContent = "Você agora é um verdadeiro especialista em automobilismo!";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
 
 mostraPergunta();
+`
