@@ -1,4 +1,3 @@
-Você tem um código bem estruturado para um quiz interativo que se baseia em um cenário envolvendo Inteligência Artificial. Para adaptá-lo ao tema automobilismo, vou mostrar como você pode modificar tanto o conteúdo das perguntas quanto as alternativas. Aqui está o código ajustado:
 
 ```javascript
 const caixaPrincipal = document.querySelector(".caixa-principal");
