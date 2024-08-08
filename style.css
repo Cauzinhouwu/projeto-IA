@@ -1,1 +1,55 @@
 
+:root {
+    --cor-fundo: #01080E; /* Cor escura, semelhante à pista de corrida à noite */
+    --cor-principal: #0B0D20; /* Cor escura, para o fundo das caixas */
+    --cor-secundaria: #212333; /* Cor intermediária, para elementos de destaque */
+    --cor-destaque: #2BDEFD; /* Cor vibrante, como detalhes em carros de corrida */
+    --cor-texto: #D7F9FF; /* Cor clara para o texto, garantindo boa legibilidade */
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif; /* Fonte padrão para uma leitura confortável */
+}
+
+.caixa-principal {
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas para um visual moderno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+}
+
+h1 {
+    color: var(--cor-destaque); /* Cor vibrante para o título */
+    font-size: 2em; /* Tamanho grande para o título se destacar */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 10px; /* Bordas arredondadas para os botões */
+    padding: 15px 25px; /* Padding confortável para o botão */
+    font-size: 1em; /* Tamanho de fonte padrão para botões */
+    cursor: pointer; /* Cursor de ponteiro para indicar interatividade */
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave para cor e transformação */
+}
+
+button:hover {
+    background-color: var(--cor-destaque); /* Cor de destaque ao passar o mouse */
+    color: var(--cor-principal); /* Cor do texto altera para contrastar com o fundo de destaque */
+    transform: scale(1.05); /* Leve aumento no botão ao passar o mouse */
+}
+
+button:active {
+    transform: scale(0.95); /* Leve redução no botão ao ser clicado */
+}
